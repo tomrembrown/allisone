@@ -9,6 +9,14 @@ lerna-debug.log*
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
+# Ignore files used by various IDEs
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
 # Runtime data
 pids
 *.pid
@@ -81,6 +89,7 @@ typings/
 # Nuxt.js build / generate output
 .nuxt
 dist
+build
 
 # Gatsby files
 .cache/
@@ -102,3 +111,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Ignore the file created by the OSX systems
+.DS_Store
+
+# Ignore backup files
+*~
+*.bak
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt

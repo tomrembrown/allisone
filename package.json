@@ -1,0 +1,23 @@
+{
+  "name": "allisone",
+  "version": "0.0.1",
+  "description": "The root level repository for All Is One app - an app to allow people to find each other and build connection.",
+  "repository": "https://github.com/tomrembrown/allisone.git",
+  "author": "Tom Brown <tombrown654321@protonmail.com>",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "createTables": "cd database && yarn run createTables",
+    "dev": "concurrently --kill-others \"cd server && yarn run dev\" \"cd client && yarn run start\"",
+    "initial": "yarn install && cd client && yarn install && cp .env_start .env && cd .. && cd database && yarn install && cp .env.production .env && cd .. && cd server && yarn install && cp .env.production .env",
+    "build": "cd client && yarn run build",
+    "pbc": "git pull && yarn install && cd client && yarn install && yarn run build && cp .htaccess ./build",
+    "server": "cd server && yarn run server"
+  },
+  "dependencies": {
+    "concurrently": "^6.1.0"
+  }
+}
